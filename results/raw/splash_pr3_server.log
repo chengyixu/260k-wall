@@ -1,0 +1,36 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+02:12:59 Loading · incoai/Qwen3.8-27B-Splash
+02:13:00 Kernel policy for GPU family 9 with 40 cores.
+02:13:00 Cache disk tier: 8192 MiB for KV pages of 1040 KiB and states of 187 MiB; transfers stage through 317 MiB of host memory.
+02:13:25 Ready · incoai/Qwen3.8-27B-Splash · context 256K · http://127.0.0.1:18796
+02:19:25 Done · input 32,011 · cached 0 · output 108 · TTFT 289.5s · 23.3 tok/s
+02:19:53 Done · input 32,143 · cached 32,000 · output 384 · TTFT 2.6s · 15.2 tok/s
+02:20:18 Done · input 32,549 · cached 32,128 · output 384 · TTFT 6.2s · 20.8 tok/s
+03:30:11 Done · input 260,011 · cached 0 · output 70 · TTFT 4112.6s · 25.6 tok/s
+03:31:56 Done · input 260,075 · cached 260,000 · output 1,536 · TTFT 2.4s · 15.1 tok/s
+04:31:40 Done · input 260,104 · cached 0 · output 1,024 · TTFT 3424.2s · 13.2 tok/s
+04:33:02 Done · input 260,104 · cached 260,096 · output 1,024 · TTFT 0.7s · 12.7 tok/s
+04:34:26 Done · input 260,104 · cached 260,096 · output 1,024 · TTFT 0.7s · 12.3 tok/s
+Memory: growth available; waiting=1; suspended=0
+Memory: growth available; resource wait cleared
+04:36:35 Done · input 260,076 · cached 260,000 · output 1,024 · TTFT 32.8s · 21.3 tok/s
+04:37:28 Done · input 260,076 · cached 260,064 · output 1,024 · TTFT 0.7s · 19.8 tok/s
+04:38:47 Done · input 260,076 · cached 260,064 · output 1,024 · TTFT 0.7s · 13.1 tok/s
+04:42:37 Done · input 47 · cached 0 · output 768 · TTFT 1.1s · 30.8 tok/s
+04:44:11 Done · input 260,181 · cached 260,000 · output 1,024 · TTFT 3.8s · 32.1 tok/s
+04:46:43 Done · input 260,181 · cached 260,160 · output 1,024 · TTFT 1.2s · 33.5 tok/s
+04:49:15 Done · input 260,181 · cached 260,160 · output 1,024 · TTFT 1.3s · 33.4 tok/s
+04:49:34 Error · model_not_found · POST /v1/chat/completions
+04:51:11 Done · input 260,188 · cached 260,032 · output 479 · TTFT 3.4s · 37.7 tok/s
+04:52:02 Done · input 290 · cached 0 · output 27 · tools 1·40a0d9bd · TTFT 2.6s · 80.0 tok/s
+04:54:18 Done · input 50 · cached 0 · output 256 · TTFT 1.6s · 36.3 tok/s
+04:54:35 Done · input 260,337 · cached 260,032 · output 414 · TTFT 4.7s · 34.6 tok/s
+04:55:21 Done · input 41 · cached 0 · output 128 · TTFT 1.2s · 34.7 tok/s
+04:55:34 Done · input 260,204 · cached 260,032 · output 348 · TTFT 3.4s · 38.0 tok/s
+04:59:16 Done · input 67 · cached 0 · output 128 · TTFT 1.3s · 33.7 tok/s
+04:59:20 Done · input 75 · cached 0 · output 128 · TTFT 2.3s · 19.5 tok/s
+04:59:21 Done · input 441 · cached 0 · output 27 · tools 1·841aa704 · TTFT 3.6s · 16.0 tok/s
+04:59:29 Done · input 195 · cached 0 · output 512 · TTFT 1.9s · 66.4 tok/s
+05:00:13 Done · input 2,082 · cached 32 · output 128 · TTFT 9.2s · 60.5 tok/s
+05:00:28 Done · input 260,236 · cached 260,032 · output 381 · TTFT 3.7s · 34.9 tok/s
+05:03:11 Stopping · releasing engine resources

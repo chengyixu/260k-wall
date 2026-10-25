@@ -1,0 +1,13 @@
+{
+  "model": "Ternary-Bonsai-2-27B-PQ2_0",
+  "requested_content_tokens": 260000,
+  "server_prompt_tokens": 260013,
+  "completion_tokens": 20,
+  "latency_s": 9720.131,
+  "decode_tps": 5.293649904742162,
+  "prompt_tps": 26.760220093394746,
+  "answer": "BONSAI2-262K-NEEDLE-91D7",
+  "sentinel_found": true,
+  "context_256k_proven": true,
+  "client_built_tokens": 260001
+}

@@ -1,0 +1,40 @@
+{
+  "elapsed_s": 9991.299596042023,
+  "built_tokens": 260001,
+  "raw": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "BONSAI2-262K-NEEDLE-91D7"
+        }
+      }
+    ],
+    "created": 1789839328,
+    "model": "Ternary-Bonsai-2-27B-PQ2_0",
+    "system_fingerprint": "b10709-9a9394a89",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 20,
+      "prompt_tokens": 260013,
+      "total_tokens": 260033,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-Tr36XJXB4rTHfTVtKLvquchrpGvOkJ1M",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 260013,
+      "prompt_ms": 9985395.354,
+      "prompt_per_token_ms": 38.40344657382516,
+      "prompt_per_second": 26.03932951897019,
+      "predicted_n": 20,
+      "predicted_ms": 5631.409,
+      "predicted_per_token_ms": 296.389947368421,
+      "predicted_per_second": 3.3739335928184224
+    }
+  }
+}

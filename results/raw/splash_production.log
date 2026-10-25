@@ -1,0 +1,15 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+05:03:22 Loading · incoai/Qwen3.8-27B-Splash
+05:03:23 Kernel policy for GPU family 9 with 40 cores.
+05:03:23 Cache disk tier: 8192 MiB for KV pages of 1040 KiB and states of 187 MiB; transfers stage through 317 MiB of host memory.
+05:03:36 Ready · incoai/Qwen3.8-27B-Splash · context 256K · http://127.0.0.1:18796
+05:04:20 Done · input 57 · cached 0 · output 29 · TTFT 1.4s · 45.8 tok/s
+05:04:23 Done · input 63 · cached 0 · output 128 · TTFT 1.0s · 35.6 tok/s
+05:04:24 Done · input 183 · cached 0 · output 5 · TTFT 1.0s
+05:04:45 Done · input 67 · cached 32 · output 128 · TTFT 0.9s · 61.3 tok/s
+05:04:47 Done · input 317 · cached 0 · output 28 · tools 1·bde97084 · TTFT 1.5s · 64.0 tok/s
+05:05:02 Done · input 484 · cached 32 · output 29 · TTFT 2.5s · 64.5 tok/s
+05:05:04 Done · input 485 · cached 0 · output 6 · TTFT 2.3s
+05:06:59 Done · input 16 · cached 0 · output 3 · TTFT 0.7s
+05:08:04 Done · input 485 · cached 32 · output 128 · TTFT 2.6s · 64.5 tok/s
+05:08:07 Done · input 609 · cached 0 · output 7 · TTFT 3.2s

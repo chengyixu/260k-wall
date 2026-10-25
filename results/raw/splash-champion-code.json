@@ -1,0 +1,9 @@
+{
+  "prompt_tokens": 260188,
+  "cached_tokens": 260032,
+  "completion_tokens": 479,
+  "ttft_s": 3.651661874988349,
+  "wall_s": 16.295654165995074,
+  "decode_tps": 37.88360424268035,
+  "content": "```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import TypeVar, Generic, Optional, Hashable\n\nK = TypeVar('K', bound=Hashable)\nV = TypeVar('V')\n\nclass LRUCache(Generic[K, V]):\n    def __init__(self, capacity: int):\n        if capacity <= 0:\n            raise ValueError(\"Capacity must be positive\")\n        self._capacity = capacity\n        self._d: OrderedDict[K, V] = OrderedDict()\n        self._lock = threading.Lock()\n\n    def get(self, key: K) -> Optional[V]:\n        with self._lock:\n            if key not in self._d:\n                return None\n            self._d.move_to_end(key)\n            return self._d[key]\n\n    def put(self, key: K, value: V) -> None:\n        with self._lock:\n            if key in self._d:\n                self._d[key] = value\n                self._d.move_to_end(key)\n            else:\n                if len(self._d) >= self._capacity:\n                    self._d.popitem(last=False)\n                self._d[key] = value\n\n    def __len__(self) -> int:\n        with self._lock:\n            return len(self._d)\n\n    def __contains__(self, key: K) -> bool:\n        with self._lock:\n            return key in self._d\n\nif __name__ == \"__main__\":\n    c = LRUCache[str, int](2)\n    c.put(\"a\", 1); c.put(\"b\", 2)\n    assert c.get(\"a\") == 1\n    c.put(\"c\", 3)\n    assert c.get(\"b\") is None\n    assert c.get(\"a\") == 1\n    assert c.get(\"c\") == 3\n    assert len(c) == 2\n    c.put(\"a\", 10)\n    assert c.get(\"a\") == 10\n    assert len(c) == 2\n    assert \"a\" in c and \"c\" in c and \"b\" not in c\n    print(\"All tests passed\")\n```"
+}

@@ -1,0 +1,45 @@
+{
+  "plan": {
+    "tokens": 128,
+    "wall": 4.617069375002757,
+    "ttft": 1.1603691250202246,
+    "tps": 37.029534163584714,
+    "reasoning": "The user wants an ultra-concise implementation plan for a linearizable thread-safe generic Python LRU cache. Key requirements:\n- Linearizable (strongest consistency: every operation appears to take effect atomically at a single point in time)\n- Thread-safe\n- Generic (type parameterized)\n- LRU (least recently used eviction)\n- Minimal assert tests\n- Focus on invariants and locking\n\nLet me think about the design:\n\n**Linearizability**: Every public method must acquire the lock, perform its operation, and release. The lock acquisition is the linearization point. No operation can observe a partially",
+    "content": "",
+    "usage": {
+      "prompt_tokens": 41,
+      "completion_tokens": 128,
+      "total_tokens": 169,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 128
+      }
+    }
+  },
+  "plan_text": "The user wants an ultra-concise implementation plan for a linearizable thread-safe generic Python LRU cache. Key requirements:\n- Linearizable (strongest consistency: every operation appears to take effect atomically at a single point in time)\n- Thread-safe\n- Generic (type parameterized)\n- LRU (least recently used eviction)\n- Minimal assert tests\n- Focus on invariants and locking\n\nLet me think about the design:\n\n**Linearizability**: Every public method must acquire the lock, perform its operation, and release. The lock acquisition is the linearization point. No operation can observe a partially",
+  "executor": {
+    "tokens": 348,
+    "wall": 12.61673029200756,
+    "ttft": 3.6523999579949304,
+    "tps": 38.82052390233902,
+    "reasoning": "",
+    "content": "```python\nimport threading\nfrom typing import TypeVar, Generic, Optional, Any\nfrom collections import OrderedDict\n\nK = TypeVar('K')\nV = TypeVar('V')\n\nclass LRUCache(Generic[K, V]):\n    def __init__(self, capacity: int):\n        self._lock = threading.Lock()\n        self._cap = capacity\n        self._data: OrderedDict[K, V] = OrderedDict()\n\n    def get(self, key: K) -> Optional[V]:\n        with self._lock:\n            if key not in self._data:\n                return None\n            self._data.move_to_end(key)\n            return self._data[key]\n\n    def put(self, key: K, value: V) -> None:\n        with self._lock:\n            if key in self._data:\n                self._data.move_to_end(key)\n            self._data[key] = value\n            if len(self._data) > self._cap:\n                self._data.popitem(last=False)\n\n    def __len__(self) -> int:\n        with self._lock:\n            return len(self._data)\n\nif __name__ == \"__main__\":\n    c = LRUCache[str, int](2)\n    c.put(\"a\", 1); c.put(\"b\", 2)\n    assert c.get(\"a\") == 1\n    c.put(\"c\", 3)\n    assert c.get(\"b\") is None\n    assert c.get(\"a\") == 1\n    assert len(c) == 2\n    print(\"All tests passed\")\n```",
+    "usage": {
+      "prompt_tokens": 260204,
+      "completion_tokens": 348,
+      "total_tokens": 260552,
+      "prompt_tokens_details": {
+        "cached_tokens": 260032
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "total_wall_s": 17.236055626010057,
+  "final_answer_effective_tps": 20.19023421314856,
+  "aggregate_generated_tps": 27.616527257065275,
+  "passes_final_answer_speed": true
+}

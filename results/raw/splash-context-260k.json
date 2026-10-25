@@ -1,0 +1,13 @@
+{
+  "model": "incoai/Qwen3.8-27B-Splash",
+  "requested_content_tokens": 260000,
+  "server_prompt_tokens": 260013,
+  "completion_tokens": 20,
+  "latency_s": 6810.22,
+  "decode_tps": null,
+  "prompt_tps": null,
+  "answer": "BONSAI2-262K-NEEDLE-91D7",
+  "sentinel_found": true,
+  "context_256k_proven": true,
+  "client_built_tokens": 260001
+}

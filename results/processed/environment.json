@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-09-21",
+  "hardware": {
+    "chip": "Apple M4 Max",
+    "cpu_cores": 16,
+    "gpu_cores": 40,
+    "unified_memory_bytes": 68719476736
+  },
+  "os": {
+    "name": "macOS",
+    "version": "27.0",
+    "build": "26A428"
+  },
+  "splash": {
+    "release_runtime": "1.0",
+    "main_commit": "f58d36ddb046726adc8937ab67d07bdde015c0d6",
+    "ssd_tier_pr_commit": "8ebf821630900af05e5527305fe3eeccc2c7e424",
+    "binary_sha256": "105ad8502d69751494ef5cd478d89654ba35f8596bab0024939f2110a71ffd5a",
+    "metallib_sha256": "2f66552a315146653dccafb3eb8b1f5457c6555c789c4cd43706d5258dfd9f02"
+  },
+  "champion": {
+    "context_window": 262144,
+    "metal_ceiling_bytes": 34359738368,
+    "ssd_cache_bytes": 8589934592,
+    "planner_reasoning_effort": "medium",
+    "planner_max_tokens": 128,
+    "executor_reasoning_effort": "none",
+    "proxy_sha256": "aec14c0724671f252ae37079efd9ed1552ba5d4d4f485b1986be118d4d92139d"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "chatcmpl-f1ee715e38bf3dcf25013b62c446efe0",
+  "object": "chat.completion",
+  "created": 1789937519,
+  "model": "incoai/Qwen3.8-27B-Splash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_f1ee715e38bf3dcf25013b62c446efe0_0",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\"path\":\"/tmp/example.txt\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 290,
+    "completion_tokens": 27,
+    "total_tokens": 317,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "metrics": {
+    "prefill": {
+      "tokens": 290
+    },
+    "decode": {
+      "tokens": 23
+    },
+    "request_latency": {
+      "start_to_first_token_ms": 2576.517,
+      "first_token_to_done_ms": 287.446,
+      "wall_ms": 2872.161,
+      "ttft_ms": 2584.715,
+      "queue_to_start_ms": 8.19800000000032,
+      "stream_tokens_per_second": 80.01502890977783
+    },
+    "cache": {
+      "status": "miss",
+      "matched_tokens": 0,
+      "capacity": 262144,
+      "slot": 0
+    }
+  }
+}

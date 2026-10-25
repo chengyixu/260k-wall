@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "deployment": "ternary-bonsai-2-27b-262k",
+  "hardware": "Apple M4 Max, 64 GB unified memory",
+  "source": {
+    "repository": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+    "revision": "6ed5e12bf84b7a63069882c91dd9e9218647d17b",
+    "file": "Ternary-Bonsai-2-27B-PQ2_0.gguf",
+    "sizeBytes": 7206168928,
+    "sha256": "3907dc1658db1f78a9826bf8d5bcb8dc65db0d466388937af57f2294fae62ec1"
+  },
+  "runtime": {
+    "repository": "PrismML-Eng/llama.cpp",
+    "release": "prism-b10709-9a9394a",
+    "binary": "/Users/<user>/Models/speed-lab/bonsai-demo/bin/mac/llama-server",
+    "binarySha256": "446c46ffc82ace68d83d15c77c27d301a45e99ac5988ca919c4fc32e26082fba",
+    "endpoint": "http://127.0.0.1:7870/v1",
+    "contextWindow": 262144,
+    "kvCache": "f16",
+    "parallelSlots": 1,
+    "reasoning": "xhigh",
+    "reasoningBudget": 8192
+  },
+  "acceptance": {
+    "minimumDecodeTokensPerSecond": 20.0,
+    "requiredContextPromptTokens": 256000,
+    "requiredSentinelRecovery": true,
+    "requiredToolCalling": true,
+    "requiredCodingSmoke": true,
+    "requiredPrefixReuse": true
+  }
+}

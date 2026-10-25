@@ -1,0 +1,54 @@
+{
+  "contract": {
+    "minimum_real_prompt_tokens": 256000,
+    "minimum_decode_tokens_per_second": 20.0,
+    "objective_after_hard_gates": "maximize practical agent intelligence"
+  },
+  "context_proofs": {
+    "bonsai_f16": {"prompt_tokens": 260013, "sentinel": true, "decode_tps": 3.3739335928, "prompt_tps": 26.039329519},
+    "bonsai_q4": {"prompt_tokens": 260013, "sentinel": true, "decode_tps": 5.2936499047, "prompt_tps": 26.760220093},
+    "splash": {"prompt_tokens": 260013, "sentinel": true, "cold_latency_s": 6810.22}
+  },
+  "short_and_candidate_results": {
+    "qwen27_dynamic_q4_llamacpp_ar_tps": 15.877438034,
+    "qwen27_dynamic_q4_llamacpp_mtp_tps": 15.662524799,
+    "qwen27_q6_llamacpp_ar_tps": 15.663018715,
+    "qwen27_q6_llamacpp_mtp_tps": 16.990670749,
+    "qwen27_q6_llamacpp_dflash2_tps": 11.066113257,
+    "mlx_qwen27_4bit_ar_tps": 28.502870975,
+    "mlx_qwen27_4bit_dflash2_tps": 40.41266182,
+    "omlx_dflash2_262k_slot_tps": 18.503087042,
+    "mlx_dspark_dflash_kv4_tps": 18.867571588,
+    "bonsai_short_code_tps": 25.767285757,
+    "bonsai_short_prose_tps": 25.060977772,
+    "bonsai_short_xhigh_tps": 21.868242002,
+    "splash_short_none_tps": 30.181210835,
+    "splash_short_medium_tps": 24.796311758,
+    "splash_short_xhigh_tps": 19.702597226
+  },
+  "full_context_reasoning_results": {
+    "splash_medium_realistic_coding_tps": 15.097861542,
+    "splash_low_realistic_coding_median_tps": 12.697777094,
+    "splash_none_realistic_coding_median_tps": 19.900744341
+  },
+  "champion_results": {
+    "planner_tokens": 128,
+    "planner_decode_tps": 37.029534164,
+    "executor_tokens": 348,
+    "executor_decode_tps": 38.820523902,
+    "executor_cached_tokens": 260032,
+    "combined_wall_s": 17.236055626,
+    "final_answer_effective_tps": 20.190234213,
+    "aggregate_generated_tps": 27.616527257,
+    "three_run_executor_median_tps": 33.528713214,
+    "proxy_full_context_stream_tps": 38.857059702,
+    "proxy_full_context_end_to_end_final_tps": 14.730301802,
+    "pi_cli": "PI_CHAMPION_FINAL_OK",
+    "tool_call": true,
+    "generated_code_tests": true
+  },
+  "interpretation": {
+    "standard_tps_metric": "completion tokens divided by post-TTFT decode interval",
+    "important_caveat": "planner latency and cache restoration may lower end-to-end final-answer throughput below streaming decode throughput; both are reported"
+  }
+}

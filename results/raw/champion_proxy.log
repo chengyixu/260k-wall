@@ -1,0 +1,15 @@
+Champion proxy ready on http://127.0.0.1:7870/v1 (qwen3.8-27b-champion-262k)
+[champion] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[champion] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[champion] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[champion] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[champion] 127.0.0.1 "GET /v1/models HTTP/1.1" 200 -
+[champion] 127.0.0.1 "POST /v1/responses HTTP/1.1" 200 -
+[champion] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[champion] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[champion] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+Champion proxy ready on http://127.0.0.1:7870/v1 (qwen3.8-27b-champion-262k)
+[champion] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[champion] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[champion] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[champion] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -

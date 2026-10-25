@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "The 260K Wall: Model-Specialized Serving and Planner–Executor Decomposition for Qwen3.8-27B Agentic Inference on Apple Silicon"
+message: "If you use this artifact, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Xu"
+    given-names: "Chengyi"
+  - name: "KLIK team"
+repository-code: "https://huggingface.co/datasets/ChengyiX/260k-wall"
+url: "https://huggingface.co/datasets/ChengyiX/260k-wall"
+license: MIT
+version: 1.0.0
+date-released: 2026-09-21
+keywords:
+  - Qwen3.8
+  - Apple Silicon
+  - long-context inference
+  - speculative decoding
+  - planner-executor
+  - Splash
+abstract: >-
+  A paper and reproducibility package for verified 260k-context Qwen3.8-27B
+  agentic inference on an Apple M4 Max, including negative results and a
+  compact-plan/full-context-execute serving method.
